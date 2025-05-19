@@ -9,11 +9,11 @@
 <ul>
   <li>
     税抜価格 <br>
-    <span th:text="${#numbers.formatInteger(application.sum1,2,'COMMA')}"></span>
+    <span th:text="${#numbers.formatInteger(application.priceExcludeTax,0,'COMMA')}"></span>
   </li>
   <li>
     税込み価格 <br>
-    <span th:text="${#numbers.formatInteger(application.sum2,2,'COMMA')}" ></span>
+    <span th:text="${#numbers.formatInteger(application.priceIncludeTax,0,'COMMA')}" ></span>
   </li>
 </ul>
 </body>

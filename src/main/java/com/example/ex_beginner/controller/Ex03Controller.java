@@ -20,10 +20,10 @@ public class Ex03Controller {
 
     @PostMapping("result")
     public String result(Integer num1,Integer num2,Integer num3){
-        int sum1 = num1 + num2 + num3;
-        int sum2 = sum1*110/100;
-        application.setAttribute("sum1",sum1);
-        application.setAttribute("sum2",sum2);
+        int priceExcludeTax = num1 + num2 + num3;
+        int priceIncludeTax = priceExcludeTax*110/100;
+        application.setAttribute("priceExcludeTax",priceExcludeTax);
+        application.setAttribute("priceIncludeTax",priceIncludeTax);
         return "exam03-result";
     }
 }
